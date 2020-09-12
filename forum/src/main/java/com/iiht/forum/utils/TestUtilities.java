@@ -18,14 +18,13 @@ public class TestUtilities {
 		
 		return visitorpost;
 	}
-	
 	public VisitorComments convertToVisitorComments(VisitorCommentsDto commentdto) {
 		VisitorComments visitorComment = new VisitorComments();
 		visitorComment.setCommentId(commentdto.getCommentId());
 		visitorComment.setPostId(commentdto.getCommentId());
 		visitorComment.setTags(commentdto.getTags());
 		visitorComment.setVisitorComment(commentdto.getVisitorComment());
-		return null;
+		return visitorComment;
 	}
 	public VisitorCommentsDto convertToVisitorCommentsDto(VisitorComments visitorComments) {
 		VisitorCommentsDto visitorCommentDto = new VisitorCommentsDto();
@@ -42,7 +41,7 @@ public class TestUtilities {
 		visitorPostdto.setPostId(visitorPosts.getPostId());
 		visitorPostdto.setTags(visitorPosts.getTags());
 		visitorPostdto.setTitle(visitorPosts.getTitle());
-		return null;
+		return visitorPostdto;
 	}
 	
 	public List<VisitorPostsDto> convertToVisitorPostsDtoList(List<VisitorPosts> visitorPostList){
@@ -59,7 +58,7 @@ public class TestUtilities {
 	{
 		list.add(convertToVisitorCommentsDto(commentdto));
 	}
-	return list;
+		return list;
 	}
 	
 }
